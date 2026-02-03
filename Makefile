@@ -1,7 +1,10 @@
-.PHONY: dev build test coverage lint typecheck clean
+.PHONY: dev stop build test coverage lint typecheck clean
 
 dev:
 	npm run dev
+
+stop:
+	@pkill -f "vite" || echo "No vite process found"
 
 build:
 	npm run build
